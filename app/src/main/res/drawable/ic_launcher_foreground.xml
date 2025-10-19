@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Simple white shield on brand circle -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M54,22 L82,32 L82,55c0,18 -16,30 -28,33c-12,-3 -28,-15 -28,-33L26,32z"/>
+</vector>

@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- App theme used by AndroidManifest -->
+    <style name="Theme.Sentinal" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Keep it minimal; Material3 supplies defaults -->
+        <!-- Example overrides (optional): -->
+        <!-- <item name="android:statusBarColor">?attr/colorSurface</item> -->
+        <!-- <item name="android:navigationBarColor">?attr/colorSurface</item> -->
+    </style>
+
+</resources>

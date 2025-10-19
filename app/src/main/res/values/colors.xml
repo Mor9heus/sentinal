@@ -1,0 +1,5 @@
+<resources>
+    <!-- Material3 will generate a dynamic scheme; explicit colors are optional -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>

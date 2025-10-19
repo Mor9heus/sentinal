@@ -1,0 +1,4 @@
+<resources>
+    <!-- Night theme can simply inherit the same parent -->
+    <style name="Theme.Sentinal" parent="Theme.Material3.DayNight.NoActionBar" />
+</resources>
