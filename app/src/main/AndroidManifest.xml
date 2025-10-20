@@ -1,18 +1,19 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sentinal.app">
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Location for geofences -->
+    <!-- Permissions for geofencing / foreground / boot -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!-- For foreground service + notifications -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <!-- Re-register geofences after reboot / app updates -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Optional notifications for your foreground service -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
-        android:label="Sentinal"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
         android:theme="@style/Theme.Sentinal">
 
         <activity
@@ -24,19 +25,15 @@
             </intent-filter>
         </activity>
 
-        <!-- Foreground sentinel (impact/water + watch status) -->
         <service
             android:name=".service.GuardianService"
             android:exported="false"
-            android:foregroundServiceType="dataSync" />
+            android:foregroundServiceType="location" />
 
-        <!-- Geofence transition receiver -->
         <receiver
             android:name=".geofence.GeofenceReceiver"
-            android:enabled="true"
             android:exported="false" />
 
-        <!-- Re-register geofences on boot and app update -->
         <receiver
             android:name=".geofence.BootReceiver"
             android:enabled="true"
@@ -47,5 +44,6 @@
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
             </intent-filter>
         </receiver>
+
     </application>
 </manifest>
