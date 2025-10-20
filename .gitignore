@@ -1,26 +1,26 @@
+# Gradle
+.gradle/
+build/
+**/build/
+
 # IDE
 .idea/
 *.iml
 
-# Gradle
-.gradle/
-**/build/
-!gradle/wrapper/gradle-wrapper.jar
-!gradle/wrapper/gradle-wrapper.properties
-
-# Local env
+# Local config
 local.properties
-*.keystore
-*.jks
-*.pem
-*.keystore.properties
 
-# OS junk
+# Native/NDK intermediates
+.externalNativeBuild/
+.cxx/
+
+# Test recordings / captures
+captures/
+
+# Keystores (DO NOT COMMIT RELEASE KEYS)
+*.jks
+*.keystore
+
+# Misc cache
 .DS_Store
 Thumbs.db
-
-# Logs
-*.log
-
-# Android profiling / captures
-captures/
