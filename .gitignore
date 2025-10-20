@@ -24,3 +24,5 @@ captures/
 # Misc cache
 .DS_Store
 Thumbs.db
+# Keep Gradle wrapper JAR
+!gradle/wrapper/gradle-wrapper.jar
